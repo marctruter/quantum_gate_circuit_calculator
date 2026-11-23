@@ -1,6 +1,6 @@
 # Quantum Gate Circuit Calculator
 
-A SageMath calculator that approximates diagonal single-qubit gates using V-gates. It takes a nonzero complex number $z = a + bi$, normalises it to $\alpha = z/|z|$, and searches for a circuit approximating $\operatorname{diag}(\alpha, \overline{\alpha})$.
+A SageMath calculator that approximates diagonal single-qubit gates using V-gates. It normalises a nonzero complex input `z = a + bi` to `alpha = z / abs(z)` and searches for a circuit that approximates the diagonal matrix with entries `alpha` and its complex conjugate.
 
 ## Run the calculator
 
@@ -11,6 +11,8 @@ load("golden-gate-circuit-calculator.sage")
 ```
 
 Enter the real and imaginary parts `a` and `b`, then set the **Maximum Length** and **Maximum A** sliders. The calculator displays the Diophantine approximation, the V-gate sequence, and the final unitary factor. It also plots the path through the search tree for circuits of length 1 or 2. The search is randomised, so if it finds no solution, try the same inputs again or increase the search limits.
+
+## Examples
 
 ![Example of the golden-gate circuit calculator](https://user-images.githubusercontent.com/68598333/134773818-c2ba9996-d1b9-485d-a5ee-da97dfb3f23e.jpg)
 
